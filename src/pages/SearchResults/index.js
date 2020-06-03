@@ -17,7 +17,7 @@ export default function SearchResults ({ params }) {
 
   const debounceHanlderNextPage = useCallback(debounce(
     () => setPage(prevPage => prevPage + 1), 200
-  ), []);
+  ), [setPage]);
 
   useEffect(() => {
     if (isNearScreen) debounceHanlderNextPage();
